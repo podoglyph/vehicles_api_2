@@ -39,7 +39,7 @@ class Api::V1::ModelsController < ApplicationController
   private
 
     def model_params
-      params.require(:model).permit(:name, :base_price, :style)
+      params.require(:model).permit(:name, :base_price, :style, :make_id)
     end
 
     def set_model

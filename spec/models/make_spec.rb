@@ -5,4 +5,9 @@ describe Make, type: :model do
     it {should validate_presence_of(:name)}
     it {should validate_presence_of(:country)}
   end
+
+  describe "ActiveRecord associations" do
+    it { should have_many(:models) }
+  end
+
 end
