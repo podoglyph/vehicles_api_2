@@ -30,7 +30,9 @@ describe "Model API" do
     end
 
     it "can create a new model" do
-      model_params = {name: "3 Series", base_price: 22000, style: "sedan"}
+      make = create(:make)
+
+      model_params = {name: "3 Series", base_price: 22000, style: "sedan", make_id: make.id}
 
       post "/api/v1/models", params: {model: model_params}
 

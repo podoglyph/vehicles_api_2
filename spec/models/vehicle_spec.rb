@@ -6,4 +6,9 @@ describe Vehicle, type: :model do
     it {should validate_presence_of(:color)}
     it {should validate_presence_of(:mileage)}
   end
+
+  describe "ActiveRecord associations" do
+    it { should have_many(:vehicle_options) }
+  end
+
 end
