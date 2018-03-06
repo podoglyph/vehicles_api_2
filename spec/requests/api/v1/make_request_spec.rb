@@ -11,7 +11,7 @@ describe "Make API" do
     end
 
     it "sends a list of all makes" do
-      get "/api/m1/makes"
+      get "/api/v1/makes"
 
       json = JSON.parse(response.body)
 
@@ -21,7 +21,7 @@ describe "Make API" do
     end
 
     it "send a single make" do
-      get "/api/m1/makes/#{@m1.id}"
+      get "/api/v1/makes/#{@m1.id}"
 
       json = JSON.parse(response.body)
 
@@ -32,7 +32,7 @@ describe "Make API" do
     it "can create a new make" do
       make_params = {name: "Cool Car Manufacturer", country: "America"}
 
-      post "/api/m1/makes", params: {make: make_params}
+      post "/api/v1/makes", params: {make: make_params}
 
       make = Make.last
 
@@ -43,7 +43,7 @@ describe "Make API" do
     end
 
     it "can update an existing make" do
-      put "/api/m1/makes/#{@m1.id}", params: {make: {name: "Peugeot"}}
+      put "/api/v1/makes/#{@m1.id}", params: {make: {name: "Peugeot"}}
 
       new_make = Make.find(@m1.id)
 
@@ -53,7 +53,7 @@ describe "Make API" do
     end
 
     it "can delete an existing make" do
-      delete "/api/m1/makes/#{@m2.id}"
+      delete "/api/v1/makes/#{@m2.id}"
 
       assert_response :success
       expect(response).to be_success
