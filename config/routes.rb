@@ -5,6 +5,7 @@ Rails.application.routes.draw do
         resources :vehicles, except: [:new]
         resources :makes, except: [:new]
         resources :models, except: [:new]
+        resources :options, except: [:new]
       end
     end
 
