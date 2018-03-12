@@ -22,35 +22,46 @@ To run:
 
 ### Makes
 
-`params: :name, :country`
+params: `:name, :country`
+request format: `/api/v1/makes?makes[name]=<make_name>`
+request format example: `/api/v1/makes?makes[name]="Tesla"`
 
 | Resources | Detail | Params |
-| :-------- |:-------| :------- |
+| :-------- |:-------| :-------|
 | GET `/api/v1/makes` | Index all makes | |
-| GET `/api/v1/makes/:id` | Show single make | :id |
+| GET `/api/v1/makes/:id` | Show single make | |
 | POST `/api/v1/makes?params` | Create new make | required |
 | PUT `/api/v1/makes/:id` | Update existing make | 1 or more required|
 | DELETE `/api/v1/makes/:id` | Delete existing make | |
 
 
 ### Models
+belong_to :make
 
-| Resources | Detail |
-| :-------- |:-------|
-| GET `/api/v1/models` | Index all models for a make |
-| POST `/api/v1/models/?model[name]=<model_name>?model[style]=<model_style>?model[base_price]=<model_base_price>` | Create new model |
-| PUT `/api/v1/models/:id` | Update existing model |
-| DELETE `/api/v1/models/:id` | Delete existing model |
+params: `:name, :base_price, :style, :make_id`
+request format: `/api/v1/models?model[name]=<model_name>`
+request format example: `/api/v1/models?model[name]="Model 3"`
+
+| Resources | Detail | Params |
+| :-------- |:-------| :-------|
+| GET `/api/v1/models` | Index all models for a make | |
+| POST `/api/v1/models/?params` | Create new model | required |
+| PUT `/api/v1/models/:id` | Update existing model | 1 or more required |
+| DELETE `/api/v1/models/:id` | Delete existing model | |
 
 
 ### Vehicles
+params: `:nickname, :color, :mileage`
+request format: `/api/v1/models?vehicle[nickname]=<vehicle_nickname>`
+request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?vehicle[mileage]=2000?vehicle[color]="White"`
 
-| Resources | Detail |
+| Resources | Detail | Params |
 | :-------- |:-------|
-| GET `/api/v1/vehicles` | Index all vehicles |
-| GET `/api/v1/vehicles/:id` | Show single vehicle |
-| PUT `/api/v1/vehicles/:id?vehicle[name]=<vehicle_name>` | Update existing vehicle |
-| DELETE `/api/v1/vehicles/:id` | Delete existing vehicle |
+| GET `/api/v1/vehicles` | Index all vehicles | |
+| GET `/api/v1/vehicles/:id` | Show single vehicle | |
+| POST `/api/v1/vehicles/?params` | Create new vehicle | required |
+| PUT `/api/v1/vehicles/:id?` | Update existing vehicle | 1 or more required |
+| DELETE `/api/v1/vehicles/:id` | Delete existing vehicle | |
 
 ## License
 
