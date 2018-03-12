@@ -126,6 +126,31 @@ To run:
 
 ### Custom Endpoints
 
+Makes
+* `/api/v1/makes/:id/find_models` returns collection of models for given make
+
+#### Example `/find_models` response
+```json
+[
+    {
+        "id": 1,
+        "name": "Millennium Falcon",
+        "style": "suv",
+        "base_price": 34999,
+        "make_id": 1,
+        "make": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG"
+    },
+    {
+        "id": 2,
+        "name": "Y-Wing Starfighter",
+        "style": "suv",
+        "base_price": 59999,
+        "make_id": 1,
+        "make": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG"
+    }
+]
+```
+
 Vehicles
 * `/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color
 * `/api/v1/vehicles/:vehicle_id/options` returns collection of options for a given vehicle
