@@ -22,13 +22,15 @@ To run:
 
 ### Makes
 
-| Resources | Detail |
-| :-------- |:-------|
-| GET `/api/v1/makes` | Index all makes |
-| GET `/api/v1/makes/:id` | Show single make |
-| POST `/api/v1/makes?make[name]=name&make[country]=country` | Create new make |
-| PUT `/api/v1/makes/:id` | Update existing make |
-| DELETE `/api/v1/makes/:id` | Delete existing make |
+`params: :name, :country`
+
+| Resources | Detail | Params |
+| :-------- |:-------| :------- |
+| GET `/api/v1/makes` | Index all makes | |
+| GET `/api/v1/makes/:id` | Show single make | :id |
+| POST `/api/v1/makes?params` | Create new make | required |
+| PUT `/api/v1/makes/:id` | Update existing make | 1 or more required|
+| DELETE `/api/v1/makes/:id` | Delete existing make | |
 
 
 ### Models
