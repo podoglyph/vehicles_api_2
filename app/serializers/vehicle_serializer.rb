@@ -1,6 +1,7 @@
 class VehicleSerializer < ActiveModel::Serializer
   attributes :id, :nickname, :color, :mileage, :price, :make_id, :model_id, :make, :model, :options
-
+  has_many :options
+  
   def make
     Make.find(object.make_id).name
   end

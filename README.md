@@ -80,16 +80,12 @@ To run:
         {
             "id": 10,
             "name": "Dual Power Seats",
-            "cost": 876,
-            "created_at": "2018-03-12T17:48:00.683Z",
-            "updated_at": "2018-03-12T17:48:00.683Z"
+            "cost": 876
         },
         {
             "id": 37,
             "name": "Chrome wheels 20 inch",
-            "cost": 235,
-            "created_at": "2018-03-12T17:48:00.736Z",
-            "updated_at": "2018-03-12T17:48:00.736Z"
+            "cost": 235
         }
     ]
 }
