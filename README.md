@@ -14,7 +14,7 @@ Here are some sample requests:
 * https://immense-cove-34954.herokuapp.com/api/v1/makes/1/find_models
 * https://immense-cove-34954.herokuapp.com/api/v1/vehicles/1/options
 * https://immense-cove-34954.herokuapp.com/api/v1/vehicles/least_mileage
-* https://immense-cove-34954.herokuapp.com/api/v1/vehicles/find_all?color=Blue
+* https://immense-cove-34954.herokuapp.com/api/v1/vehicles/find_all?color=blue
 
 A Rails JSON API for Vehicles, Makes, Models, and Options.
 

@@ -6,9 +6,9 @@ describe "Vehicles API" do
     attr_reader :vehicle1, :vehicle2, :vehicle3
 
     before(:all) do
-      @vehicle1 = create(:vehicle, color: "Blue")
-      @vehicle2 = create(:vehicle, color: "Blue")
-      @vehicle3 = create(:vehicle, color: "Red")
+      @vehicle1 = create(:vehicle, color: "blue")
+      @vehicle2 = create(:vehicle, color: "blue")
+      @vehicle3 = create(:vehicle, color: "red")
     end
 
     it "sends a list of the vehicles with given color" do

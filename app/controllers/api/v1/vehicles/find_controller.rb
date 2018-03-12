@@ -11,6 +11,11 @@ class Api::V1::Vehicles::FindController < ApplicationController
   private
 
   def vehicle_params
-    params.permit(:id, :color)
+    check_params(params.permit(:color))
   end
+
+  def check_params(params)
+    params.each {|param, v| v.downcase! }
+  end
+
 end
