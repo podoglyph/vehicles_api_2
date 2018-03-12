@@ -80,6 +80,9 @@ request format example: `/api/v1/options?option[name]="Heated Seats"`
 
 ### Custom Endpoints
 
+Vehicles `/find_all?params`
+`/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color
+
 Vehicle Options
 `/api/v1/vehicles/:vehicle_id/options` returns a collection of options for a given vehicle
 
