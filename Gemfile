@@ -9,6 +9,7 @@ gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'active_model_serializers', '~>0.10.7'
+gem 'faker', '~> 1.8.7'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -18,7 +19,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
-  gem 'faker', '~> 1.8.7'
   gem 'rspec-rails', '~> 3.7.2'
   gem 'shoulda-matchers', '~> 3.1.2'
   gem 'factory_bot_rails', '~> 4.8.2'
@@ -28,3 +28,5 @@ end
 group :test do
   gem 'database_cleaner', '~> 1.6.2'
 end
+
+ruby "2.4.1"
