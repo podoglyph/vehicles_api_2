@@ -52,7 +52,8 @@ request format example: `/api/v1/models?model[name]="Model 3"`
 
 
 ### Vehicles
-params: `:nickname, :color, :mileage`
+belongs_to :make, :model
+params: `:nickname, :color, :mileage, :price, :make_id, :model_id`
 request format: `/api/v1/models?vehicle[nickname]=<vehicle_nickname>`
 request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?vehicle[mileage]=2000?vehicle[color]="White"`
 
@@ -80,11 +81,12 @@ request format example: `/api/v1/options?option[name]="Heated Seats"`
 
 ### Custom Endpoints
 
-Vehicles `/find_all?params`
+Vehicles
 `/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color
-
-Vehicle Options
-`/api/v1/vehicles/:vehicle_id/options` returns a collection of options for a given vehicle
+`/api/v1/vehicles/:vehicle_id/options` returns collection of options for a given vehicle
+`/api/v1/vehicles/most_expensive` returns collection of 10 most expensive vehicles
+`/api/v1/vehicles/least_expensive` returns collection of 10 least expensive vehicles
+`/api/v1/vehicles/least_mileage` returns collection of 10 least mileage vehicles
 
 ## License
 

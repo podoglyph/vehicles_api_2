@@ -36,8 +36,11 @@ class Seed
   end
 
   def self.create_vehicles
+    models = Model.all
+
     nicknames.each do |n|
-      vehicle = Vehicle.create!(nickname: n, color: Faker::Color.color_name, mileage: Faker::Number.between(25, 150000))
+      model = models.sample
+      vehicle = Vehicle.create!(nickname: n, color: Faker::Color.color_name, mileage: Faker::Number.between(25, 150000), price: Faker::Number.number(5), make_id: model.make_id , model_id: model.id )
       puts "Created #{vehicle.nickname}."
     end
   end
