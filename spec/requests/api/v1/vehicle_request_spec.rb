@@ -3,9 +3,12 @@ require "rails_helper"
 describe "Vehicle API" do
 
   context "when performing standard CRUD functions" do
+    attr_reader :make, :model
 
     before(:all) do
-      @vehicles = create_list(:vehicle, 10)
+      @make = create(:make)
+      @model = create(:model, make_id: make.id)
+      @vehicles = create_list(:vehicle, 10, make_id: make.id, model_id: model.id)
       @v1 = Vehicle.first
       @v2 = Vehicle.last
     end
@@ -30,7 +33,7 @@ describe "Vehicle API" do
     end
 
     it "can create a new vehicle" do
-      vehicle_params = {nickname: "Cool Car", color: "red", mileage: 22000}
+      vehicle_params = {nickname: "Cool Car", color: "red", mileage: 22000, make_id: make.id, model_id: model.id}
 
       post "/api/v1/vehicles", params: {vehicle: vehicle_params}
 

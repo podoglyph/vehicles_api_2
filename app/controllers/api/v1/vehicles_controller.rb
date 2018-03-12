@@ -39,7 +39,7 @@ class Api::V1::VehiclesController < ApplicationController
   private
 
     def vehicle_params
-      params.require(:vehicle).permit(:nickname, :color, :mileage)
+      params.require(:vehicle).permit(:nickname, :color, :mileage, :price, :make_id, :model_id)
     end
 
     def set_vehicle
