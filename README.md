@@ -34,6 +34,14 @@ To run:
 | PUT `/api/v1/makes/:id` | Update existing make | 1 or more required|
 | DELETE `/api/v1/makes/:id` | Delete existing make | |
 
+#### Example Make Response
+```json
+{
+    "id": 1,
+    "name": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG",
+    "country": "America"
+}
+```
 
 ### Models
 * belongs_to :make
@@ -49,6 +57,17 @@ To run:
 | PUT `/api/v1/models/:id` | Update existing model | 1 or more required |
 | DELETE `/api/v1/models/:id` | Delete existing model | |
 
+#### Example Model Response
+```json
+{
+    "id": 1,
+    "name": "Millennium Falcon",
+    "style": "suv",
+    "base_price": 34999,
+    "make_id": 1,
+    "make": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG"
+}
+```
 
 ### Vehicles
 * belongs_to :make, :model
@@ -106,6 +125,31 @@ To run:
 
 
 ### Custom Endpoints
+
+Makes
+* `/api/v1/makes/:id/find_models` returns collection of models for given make
+
+#### Example `/find_models` response
+```json
+[
+    {
+        "id": 1,
+        "name": "Millennium Falcon",
+        "style": "suv",
+        "base_price": 34999,
+        "make_id": 1,
+        "make": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG"
+    },
+    {
+        "id": 2,
+        "name": "Y-Wing Starfighter",
+        "style": "suv",
+        "base_price": 59999,
+        "make_id": 1,
+        "make": "KIBO KOMMUNALMASCHINEN GMBH & CO.KG"
+    }
+]
+```
 
 Vehicles
 * `/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color

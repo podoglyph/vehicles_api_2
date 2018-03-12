@@ -11,6 +11,10 @@ Rails.application.routes.draw do
           get '/least_mileage', to: "least_mileage#index"
         end
 
+        namespace :makes do
+          get '/:id/find_models', to: "find_models#index"
+        end
+
 
         resources :vehicles, except: [:new]
         resources :makes, except: [:new]
