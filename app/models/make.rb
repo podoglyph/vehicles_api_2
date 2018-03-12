@@ -1,6 +1,7 @@
 class Make < ApplicationRecord
   validates :name, :country, presence: true
-
-  has_many :models
+  validates_uniqueness_of :name
   
+  has_many :models
+
 end
