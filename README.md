@@ -64,6 +64,37 @@ To run:
 | PUT `/api/v1/vehicles/:id?` | Update existing vehicle | 1 or more required |
 | DELETE `/api/v1/vehicles/:id` | Delete existing vehicle | |
 
+#### Example Vehicle Response
+```json
+{
+    "id": 1,
+    "nickname": "Demon",
+    "color": "grey",
+    "mileage": 138415,
+    "price": 35830,
+    "make_id": 2,
+    "model_id": 5,
+    "make": "IMECA S.R.L.",
+    "model": "Phantom II",
+    "options": [
+        {
+            "id": 10,
+            "name": "Dual Power Seats",
+            "cost": 876,
+            "created_at": "2018-03-12T17:48:00.683Z",
+            "updated_at": "2018-03-12T17:48:00.683Z"
+        },
+        {
+            "id": 37,
+            "name": "Chrome wheels 20 inch",
+            "cost": 235,
+            "created_at": "2018-03-12T17:48:00.736Z",
+            "updated_at": "2018-03-12T17:48:00.736Z"
+        }
+    ]
+}
+```
+
 ### Options
 * params: `:name, :cost`
 * request format: `/api/v1/options?option[name]=<option_name>`
