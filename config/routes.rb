@@ -7,6 +7,8 @@ Rails.application.routes.draw do
           get '/find_all', to: "find#index"
           get '/:id/options', to: "options#index"
           get '/most_expensive', to: "most_expensive#index"
+          get '/least_expensive', to: "least_expensive#index"
+          get '/least_mileage', to: "least_mileage#index"
         end
 
 
