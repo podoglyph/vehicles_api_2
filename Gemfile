@@ -8,6 +8,7 @@ end
 gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
+gem 'active_model_serializers', '~>0.10.7'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'

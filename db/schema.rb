@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180306074617) do
+ActiveRecord::Schema.define(version: 20180312173219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,9 +52,16 @@ ActiveRecord::Schema.define(version: 20180306074617) do
     t.bigint "mileage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "price"
+    t.bigint "make_id"
+    t.bigint "model_id"
+    t.index ["make_id"], name: "index_vehicles_on_make_id"
+    t.index ["model_id"], name: "index_vehicles_on_model_id"
   end
 
   add_foreign_key "models", "makes"
   add_foreign_key "vehicle_options", "options"
   add_foreign_key "vehicle_options", "vehicles"
+  add_foreign_key "vehicles", "makes"
+  add_foreign_key "vehicles", "models"
 end
