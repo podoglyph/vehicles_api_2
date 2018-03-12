@@ -11,7 +11,7 @@ class Seed
   def self.create_makes
     countries = %w(America Japan Germany Mexico Sweeden Britain China)
     10.times do
-      make = Make.create!(name: Faker::Vehicle.manufacture, country: countries.sample)
+      make = Make.create!(name: Faker::Vehicle.unique.manufacture, country: countries.sample)
       puts "Created Make: #{make.name} from #{make.country}."
     end
   end
