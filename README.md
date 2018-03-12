@@ -2,6 +2,10 @@
 
 ![travis_status](https://travis-ci.org/podoglyph/vehicles_api_2.svg?branch=master)
 
+This API is live on Heroku at https://immense-cove-34954.herokuapp.com
+
+When accessing the live api, please use https://immense-cove-34954.herokuapp.com as the root url.
+
 A Rails JSON API for Vehicles, Makes, Models, and Options.
 
 This app is built with:
@@ -10,13 +14,13 @@ This app is built with:
 * `Ruby 2.4.1`
 * `PostgreSQL 10.2`
 
-To run:
+To run locally:
 
 1. Clone this repo and `cd vehicles_api_2`
 3. `rails db:create`
 4. `rails db:migrate`
 5. `rails db:seed`
-5.  Visit `localhost:3000` or use a HTTP client such as Postman to interact with the API using the docs below.
+5.  Make local requests to `/api/v1`
 
 ## API Documentation:
 
