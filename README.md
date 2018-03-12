@@ -57,7 +57,7 @@ To run:
 * request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?vehicle[mileage]=2000?vehicle[color]="White"`
 
 | Resources | Detail | Params |
-| :-------- |:-------|
+| :-------- |:-------|:------|
 | GET `/api/v1/vehicles` | Index all vehicles | |
 | GET `/api/v1/vehicles/:id` | Show single vehicle | |
 | POST `/api/v1/vehicles/?params` | Create new vehicle | required |
@@ -70,7 +70,7 @@ To run:
 * request format example: `/api/v1/options?option[name]="Heated Seats"`
 
 | Resources | Detail | Params |
-| :-------- |:-------|
+| :-------- |:-------|:-------|
 | GET `/api/v1/options` | Index all options | |
 | GET `/api/v1/options/:id` | Show single option | |
 | POST `/api/v1/options/?params` | Create new option | required |
