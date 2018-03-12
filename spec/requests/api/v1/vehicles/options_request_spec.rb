@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "Model API" do
+describe "Vehicle Options API" do
 
   context "when requesting options for a given vehicle" do
     attr_reader :vehicle, :opt1, :opt3
