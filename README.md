@@ -22,9 +22,9 @@ To run:
 
 ### Makes
 
-params: `:name, :country`
-request format: `/api/v1/makes?makes[name]=<make_name>`
-request format example: `/api/v1/makes?makes[name]="Tesla"`
+* params: `:name, :country`
+* request format: `/api/v1/makes?makes[name]=<make_name>`
+* request format example: `/api/v1/makes?makes[name]="Tesla"`
 
 | Resources | Detail | Params |
 | :-------- |:-------| :-------|
@@ -36,11 +36,10 @@ request format example: `/api/v1/makes?makes[name]="Tesla"`
 
 
 ### Models
-belongs_to :make
-
-params: `:name, :base_price, :style, :make_id`
-request format: `/api/v1/models?model[name]=<model_name>`
-request format example: `/api/v1/models?model[name]="Model 3"`
+* belongs_to :make
+* params: `:name, :base_price, :style, :make_id`
+* request format: `/api/v1/models?model[name]=<model_name>`
+* request format example: `/api/v1/models?model[name]="Model 3"`
 
 | Resources | Detail | Params |
 | :-------- |:-------| :-------|
@@ -52,10 +51,10 @@ request format example: `/api/v1/models?model[name]="Model 3"`
 
 
 ### Vehicles
-belongs_to :make, :model
-params: `:nickname, :color, :mileage, :price, :make_id, :model_id`
-request format: `/api/v1/models?vehicle[nickname]=<vehicle_nickname>`
-request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?vehicle[mileage]=2000?vehicle[color]="White"`
+* belongs_to :make, :model
+* params: `:nickname, :color, :mileage, :price, :make_id, :model_id`
+* request format: `/api/v1/models?vehicle[nickname]=<vehicle_nickname>`
+* request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?vehicle[mileage]=2000?vehicle[color]="White"`
 
 | Resources | Detail | Params |
 | :-------- |:-------|
@@ -66,9 +65,9 @@ request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?ve
 | DELETE `/api/v1/vehicles/:id` | Delete existing vehicle | |
 
 ### Options
-params: `:name, :cost`
-request format: `/api/v1/options?option[name]=<option_name>`
-request format example: `/api/v1/options?option[name]="Heated Seats"`
+* params: `:name, :cost`
+* request format: `/api/v1/options?option[name]=<option_name>`
+* request format example: `/api/v1/options?option[name]="Heated Seats"`
 
 | Resources | Detail | Params |
 | :-------- |:-------|
@@ -82,11 +81,11 @@ request format example: `/api/v1/options?option[name]="Heated Seats"`
 ### Custom Endpoints
 
 Vehicles
-`/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color
-`/api/v1/vehicles/:vehicle_id/options` returns collection of options for a given vehicle
-`/api/v1/vehicles/most_expensive` returns collection of 10 most expensive vehicles
-`/api/v1/vehicles/least_expensive` returns collection of 10 least expensive vehicles
-`/api/v1/vehicles/least_mileage` returns collection of 10 least mileage vehicles
+* `/api/v1/vehicles/find_all?color=Blue` returns all vehicles with given color
+* `/api/v1/vehicles/:vehicle_id/options` returns collection of options for a given vehicle
+* `/api/v1/vehicles/most_expensive` returns collection of 10 most expensive vehicles
+* `/api/v1/vehicles/least_expensive` returns collection of 10 least expensive vehicles
+* `/api/v1/vehicles/least_mileage` returns collection of 10 least mileage vehicles
 
 ## License
 
