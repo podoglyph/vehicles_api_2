@@ -30,7 +30,7 @@ describe "Vehicle API" do
     end
 
     it "can create a new vehicle" do
-      vehicle_params = {nickname: "Cool Car", color: "red", mileage: 22000}
+      vehicle_params = {nickname: "Cool Car", color: "red", mileage: 22000, price: 19999}
 
       post "/api/v1/vehicles", params: {vehicle: vehicle_params}
 
@@ -41,6 +41,7 @@ describe "Vehicle API" do
       expect(vehicle["nickname"]).to eq("Cool Car")
       expect(vehicle["color"]).to eq("red")
       expect(vehicle["mileage"]).to eq(22000)
+      expect(vehicle["price"]).to eq(19999)
     end
 
     it "can update an existing vehicle" do

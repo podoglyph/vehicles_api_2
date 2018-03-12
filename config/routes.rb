@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         namespace :vehicles do
           get '/find_all', to: "find#index"
           get '/:id/options', to: "options#index"
+          get '/most_expensive', to: "most_expensive#index"
         end
 
 
