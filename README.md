@@ -6,6 +6,16 @@ This API is live on Heroku at https://immense-cove-34954.herokuapp.com
 
 When accessing the live api, please use https://immense-cove-34954.herokuapp.com as the root url.
 
+Here are some sample requests:
+
+* https://immense-cove-34954.herokuapp.com/api/v1/makes
+* https://immense-cove-34954.herokuapp.com/api/v1/models
+* https://immense-cove-34954.herokuapp.com/api/v1/vehicles
+* https://immense-cove-34954.herokuapp.com/api/v1/makes/1/find_models
+* https://immense-cove-34954.herokuapp.com/api/v1/vehicles/1/options
+* https://immense-cove-34954.herokuapp.com/api/v1/vehicles/least_mileage
+* https://immense-cove-34954.herokuapp.com/api/v1/vehicles/find_all?color=Blue
+
 A Rails JSON API for Vehicles, Makes, Models, and Options.
 
 This app is built with:
