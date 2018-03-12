@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       namespace :v1 do
 
         namespace :vehicles do
+          get '/find_all', to: "find#index"
           get '/:id/options', to: "options#index"
         end
 
