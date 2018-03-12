@@ -36,7 +36,7 @@ request format example: `/api/v1/makes?makes[name]="Tesla"`
 
 
 ### Models
-belong_to :make
+belongs_to :make
 
 params: `:name, :base_price, :style, :make_id`
 request format: `/api/v1/models?model[name]=<model_name>`
@@ -45,6 +45,7 @@ request format example: `/api/v1/models?model[name]="Model 3"`
 | Resources | Detail | Params |
 | :-------- |:-------| :-------|
 | GET `/api/v1/models` | Index all models for a make | |
+| GET `/api/v1/models/:id` | Show single model | |
 | POST `/api/v1/models/?params` | Create new model | required |
 | PUT `/api/v1/models/:id` | Update existing model | 1 or more required |
 | DELETE `/api/v1/models/:id` | Delete existing model | |
@@ -62,6 +63,20 @@ request format example: `/api/v1/vehicles?vehicle[nickname]="White Lightning"?ve
 | POST `/api/v1/vehicles/?params` | Create new vehicle | required |
 | PUT `/api/v1/vehicles/:id?` | Update existing vehicle | 1 or more required |
 | DELETE `/api/v1/vehicles/:id` | Delete existing vehicle | |
+
+### Options
+params: `:name, :cost`
+request format: `/api/v1/options?option[name]=<option_name>`
+request format example: `/api/v1/options?option[name]="Heated Seats"`
+
+| Resources | Detail | Params |
+| :-------- |:-------|
+| GET `/api/v1/options` | Index all options | |
+| GET `/api/v1/options/:id` | Show single option | |
+| POST `/api/v1/options/?params` | Create new option | required |
+| PUT `/api/v1/options/:id?` | Update existing option | 1 or more required |
+| DELETE `/api/v1/options/:id` | Delete existing option | |
+
 
 ## License
 
