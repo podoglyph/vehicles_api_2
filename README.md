@@ -78,6 +78,11 @@ request format example: `/api/v1/options?option[name]="Heated Seats"`
 | DELETE `/api/v1/options/:id` | Delete existing option | |
 
 
+### Custom Endpoints
+
+Vehicle Options
+`/api/v1/vehicles/:vehicle_id/options` returns a collection of options for a given vehicle
+
 ## License
 
 This project is licensed under the MIT License.
